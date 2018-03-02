@@ -1,4 +1,14 @@
 <h1>coe</h1>
 <p>Find me in app/views/home/index.html.erb</p>
 
-<%= @nome %>
+<%= @nome %><br>
+
+ultimo produto cadastrado:<br>
+<%= @product.name %><br>
+<%= @product.price %><br><br>
+
+nomes dos produtos:<br>
+<%= Product.all.map(&:name).join(' | ') %><br><br>
+
+soma dos produtos:<br>
+<%= Product.all.map(&:price).sum %>
